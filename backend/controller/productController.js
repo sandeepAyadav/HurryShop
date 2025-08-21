@@ -18,7 +18,7 @@ export const addProduct = async (req,res) => {
             category,
             subCategory,
             sizes :JSON.parse(sizes),
-            bestseller :bestseller === "true" ? true : false,
+            bestseller : bestseller === "true" ? true : false,
             date :Date.now(),
             image1,
             image2,
