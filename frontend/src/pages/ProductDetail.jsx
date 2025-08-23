@@ -91,7 +91,7 @@ function ProductDetail() {
             }
           </div>
             <button className='text-[16px] active:bg-slate-500 cursor-pointer bg-[#495b61c9] py-[10px] px-[20px] rounded-2xl mt-[10px] border-[1px] border-[#80808049] text-white shadow-md shadow-black'
-            onClick={()=>addtoCart(productData._id , size)} >{loading? <Loading/> : "Add to Cart"}
+            onClick={()=>addtoCart(productData._id ,10)} >{loading? <Loading/> : "Add to Cart"}
             </button> 
 
 

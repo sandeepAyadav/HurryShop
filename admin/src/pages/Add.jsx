@@ -33,7 +33,7 @@ function Add() {
       formData.append("price",price)
       formData.append("category",category)
       formData.append("subCategory",subCategory)
-      formData.append("bestseller",bestseller)
+     formData.append("bestseller", bestseller ? "true" : "false")
       formData.append("sizes",JSON.stringify(sizes))
       formData.append("image1",image1)
       formData.append("image2",image2)
@@ -170,8 +170,8 @@ function Add() {
 
        </div>
 
-       <div className='w-[80%] flex items-center justify-start gap-[10px] mt-[20px]'>
-        <input type="checkbox" id='checkbox' className='w-[25px] h-[25px] cursor-pointer' onChange={()=>setBestSeller(prev => !prev)}/>
+      <div className='w-[80%] flex items-center justify-start gap-[10px] mt-[20px]'>
+        <input type="checkbox" checked = {bestseller} className='w-[25px] h-[25px] cursor-pointer' onChange={()=>setBestSeller(!bestseller)}/>
         <label htmlFor="checkbox" className='text-[18px] md:text-[22px]  font-semibold'>
           Add to BestSeller
         </label>
@@ -179,7 +179,6 @@ function Add() {
        </div>
 
        <button className='w-[140px] px-[20px] py-[20px] rounded-xl bg-[#65d8f7] flex items-center justify-center gap-[10px] text-black active:bg-slate-700 active:text-white active:border-[2px] border-white'>{loading ? <Loading/> : "Add Product"}</button>
-
 
 
 
