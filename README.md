@@ -27,7 +27,7 @@ It supports AI-powered recommendations and integrates Razorpay payment gateway f
 
 🏗️ Tech Stack
 
-Frontend: React.js, Redux/Context API, Axios
+Frontend: React.js, Redux, Axios
 
 Backend: Node.js, Express.js
 
