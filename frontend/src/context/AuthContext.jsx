@@ -1,20 +1,22 @@
-import React, { createContext } from 'react'
-export const authDataContext = createContext();
-function authContext({children}) {
-    let serverUrl = import.meta.env.VITE_API_BASE_URL;
-    
-     let value = {
-      serverUrl
-     };
-  return (
+import React, { createContext } from 'react';
+
+
+export const AuthDataContext = createContext();
+
+function AuthContextProvider({ children }) {
    
-    <div>
-        <authDataContext.Provider value={value}>
+    const serverUrl = import.meta.env.VITE_API_BASE_URL;
+
+    const value = {
+        serverUrl
+    };
+
+    return (
+        
+        <AuthDataContext.Provider value={value}>
             {children}
-        </authDataContext.Provider>
-      
-    </div>
-  )
+        </AuthDataContext.Provider>
+    );
 }
 
-export default authContext
+export default AuthContextProvider;

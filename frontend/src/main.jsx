@@ -2,13 +2,15 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
-import AuthContext from './context/authContext.jsx'
-import "./index.css";
+import AuthContext from './context/AuthContext.jsx' // Ensure exact case match
 import UserContext from './context/UserContext.jsx'
 import ShopContext from './context/ShopContext.jsx'
+import "./index.css";
+
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <AuthContext>
+    {/* Ensure the component name matches the export in AuthContext.jsx */}
+   <AuthContext>
       <UserContext>
         <ShopContext>
            <App />
