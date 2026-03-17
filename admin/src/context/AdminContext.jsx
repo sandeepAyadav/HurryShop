@@ -29,12 +29,12 @@ function AdminContext({children}) {
 adminData,setAdminData,getAdmin
     }
   return (
-    <div>
+   
 <adminDataContext.Provider value={value}>
     {children}
 </adminDataContext.Provider>
       
-    </div>
+   
   )
 }
 
