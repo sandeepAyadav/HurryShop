@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
 
-export const authDataContext = createContext({});
+export const AuthDataContext = createContext({});
 function AuthContext({ children }) {
   let serverUrl = import.meta.env.VITE_API_BASE_URL 
   let value = {
@@ -8,9 +8,9 @@ function AuthContext({ children }) {
   };
   return (
     <div>
-      <authDataContext.Provider value={value}>
+      <AuthDataContext.Provider value={value}>
         {children}
-      </authDataContext.Provider>
+      </AuthDataContext.Provider>
     </div>
   );
 }

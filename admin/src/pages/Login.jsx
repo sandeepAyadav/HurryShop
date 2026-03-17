@@ -3,7 +3,7 @@ import logo from '../assets/logo.png'
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEye } from "react-icons/io5";
 import axios from 'axios'
-import { authDataContext } from '../context/AuthContext';
+import { AuthDataContext } from '../context/AuthContext';
 import { adminDataContext } from '../context/AdminContext';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -12,7 +12,7 @@ function Login() {
   let [show,setShow] = useState(false)
           let [email,setEmail] = useState("")
           let [password,setPassword] = useState("")
-          let {serverUrl} = useContext(authDataContext)
+          let {serverUrl} = useContext(AuthDataContext)
           let {adminData , getAdmin} = useContext(adminDataContext)
           let navigate = useNavigate()
           const [loading,setLoading] = useState(false)

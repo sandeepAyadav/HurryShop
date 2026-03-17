@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { authDataContext } from './AuthContext'
+import { AuthDataContext } from './AuthContext'
 import axios from 'axios'
 
 export const adminDataContext = createContext()
 function AdminContext({children}) {
     let [adminData,setAdminData] = useState(null)
-    let {serverUrl} = useContext(authDataContext)
+    let {serverUrl} = useContext(AuthDataContext)
 
 
     const getAdmin = async () => {

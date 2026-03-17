@@ -3,7 +3,7 @@ import Nav from '../component/Nav'
 import Sidebar from '../component/Sidebar'
 import { useState } from 'react'
 import { useContext } from 'react'
-import { authDataContext } from '../context/AuthContext'
+import { AuthDataContext } from '../context/AuthContext'
 import { useEffect } from 'react'
 import axios from 'axios'
 
@@ -11,7 +11,7 @@ function Home() {
     const [totalProducts, setTotalProducts] = useState(0)
   const [totalOrders, setTotalOrders] = useState(0)
   
-  const { serverUrl } = useContext(authDataContext)
+  const { serverUrl } = useContext(AuthDataContext)
 
  const fetchCounts = async () => {
     try {

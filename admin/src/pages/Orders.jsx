@@ -3,7 +3,7 @@ import Nav from '../component/Nav'
 import Sidebar from '../component/Sidebar'
 import { useState } from 'react'
 import { useContext } from 'react'
-import { authDataContext } from '../context/AuthContext'
+import { AuthDataContext } from '../context/AuthContext'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { SiEbox } from "react-icons/si";
@@ -11,7 +11,7 @@ import { SiEbox } from "react-icons/si";
 function Orders() {
 
   let [orders,setOrders] = useState([])
-  let {serverUrl} = useContext(authDataContext)
+  let {serverUrl} = useContext(AuthDataContext)
 
     const fetchAllOrders =async () => {
     try {

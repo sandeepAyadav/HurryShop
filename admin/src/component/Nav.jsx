@@ -2,13 +2,13 @@ import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from "../assets/logo.png"
 import axios from 'axios'
-import { authDataContext } from '../context/AuthContext'
+import { AuthDataContext } from '../context/AuthContext'
 import { adminDataContext } from '../context/AdminContext'
 import { toast } from 'react-toastify'
 
 function Nav() {
     let navigate = useNavigate()
-    let {serverUrl} = useContext(authDataContext)
+    let {serverUrl} = useContext(AuthDataContext)
     let {getAdmin} = useContext(adminDataContext)
 
     const logOut = async () => {

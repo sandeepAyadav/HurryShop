@@ -3,7 +3,7 @@ import Nav from '../component/Nav'
 import Sidebar from '../component/Sidebar'
 import upload from '../assets/upload image.jpg'
 import { useState } from 'react'
-import { authDataContext } from '../context/AuthContext'
+import { AuthDataContext } from '../context/AuthContext'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import Loading from '../component/Loading'
@@ -21,7 +21,7 @@ function Add() {
   const [bestseller, setBestSeller] = useState(false)
   const [sizes,setSizes] = useState([])
   const [loading,setLoading] = useState(false)
-  let {serverUrl} = useContext(authDataContext)
+  let {serverUrl} = useContext(AuthDataContext)
 
   const handleAddProduct = async (e) => {
     setLoading(true)
