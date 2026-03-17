@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { authDataContext } from './AuthContext'
+import { AuthDataContext } from './AuthContext'
 import axios from 'axios'
 
 export const userDataContext = createContext()
 function UserContext({children}) {
     let [userData,setUserData] = useState("")
-    let {serverUrl} = useContext(authDataContext)
+    let {serverUrl} = useContext(AuthDataContext)
 
 
    const getCurrentUser = async () => {

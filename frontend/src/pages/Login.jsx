@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import google from '../assets/google.png';
 import { IoEyeOutline } from 'react-icons/io5';
 import { IoEye } from 'react-icons/io5';
-import { authDataContext } from '../context/AuthContext';
+import { AuthDataContext } from '../context/AuthContext';
 import axios from 'axios';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../../utils/Firebase';
@@ -15,7 +15,7 @@ function Login() {
   let [show, setShow] = useState(false);
   let [email, setEmail] = useState('');
   let [password, setPassword] = useState('');
-  let { serverUrl } = useContext(authDataContext);
+  let { serverUrl } = useContext(AuthDataContext);
   let { getCurrentUser } = useContext(userDataContext);
   const handlelogin = async (e) => {
     e.preventDefault();

@@ -10,11 +10,11 @@ import { IoMdHome } from "react-icons/io";
 import { HiOutlineCollection } from "react-icons/hi";
 import { MdContacts } from "react-icons/md";
 import axios from 'axios';
-import { authDataContext } from '../context/AuthContext';
+import { AuthDataContext } from '../context/AuthContext';
 import { shopDataContext } from '../context/ShopContext';
 function Nav() {
     let {getCurrentUser , userData} = useContext(userDataContext)
-    let {serverUrl} = useContext(authDataContext)
+    let {serverUrl} = useContext(AuthDataContext)
     let {showSearch,setShowSearch,search,setSearch,getCartCount} = useContext(shopDataContext)
     let [showProfile,setShowProfile] = useState(false)
     let navigate = useNavigate()

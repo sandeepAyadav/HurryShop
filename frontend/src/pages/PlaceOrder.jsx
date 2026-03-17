@@ -3,7 +3,7 @@ import Title from '../component/Title'
 import CartTotal from '../component/CartTotal'
 import razorpay from '../assets/Razorpay.jpg'
 import { shopDataContext } from '../context/ShopContext'
-import { authDataContext } from '../context/AuthContext'
+import { AuthDataContext } from '../context/AuthContext'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -13,7 +13,7 @@ function PlaceOrder() {
     let [method,setMethod] = useState('cod')
     let navigate = useNavigate()
     const {cartItem , setCartItem , getCartAmount , delivery_fee , products } = useContext(shopDataContext)
-    let {serverUrl} = useContext(authDataContext)
+    let {serverUrl} = useContext(AuthDataContext)
     let [loading ,setLoading] = useState(false)
 
     let [formData,setFormData] = useState({

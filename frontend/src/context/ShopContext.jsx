@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { authDataContext } from './AuthContext'
+import { AuthDataContext } from './AuthContext'
 import axios from 'axios'
 import { userDataContext } from './UserContext'
 import { toast } from 'react-toastify'
@@ -15,7 +15,7 @@ function ShopContext({ children }) {
     
     // Contexts se data nikalna
     const { userData } = useContext(userDataContext)
-    const { serverUrl } = useContext(authDataContext)
+    const { serverUrl } = useContext(AuthDataContext)
     
     const currency = '₹'
     const delivery_fee = 40
