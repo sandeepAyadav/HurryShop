@@ -7,11 +7,18 @@ function BestSeller() {
     let {products} = useContext(shopDataContext)
     let [bestSeller,setBestSeller] = useState([])
 
-    useEffect(()=>{
-    let filterProduct = products.filter((item) => item.bestseller)
+    // useEffect(()=>{
+    // let filterProduct = products.filter((item) => item.bestseller)
 
-    setBestSeller(filterProduct.slice(0,4));
-    },[products])
+    // setBestSeller(filterProduct.slice(0,4));
+    // },[products])
+    useEffect(()=>{
+        if (products && Array.isArray(products)) {
+        let filterProduct = products.filter((item) => item.bestseller);
+        setBestSeller(filterProduct.slice(0, 4));
+    }
+
+    })
   return (
     <div>
         <div className='h-[8%] w-[100%] text-center mt-[50px] '>
