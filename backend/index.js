@@ -17,7 +17,7 @@ let app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
- origin:["http://localhost:5175" , "http://localhost:5176","https://hurryshop-frontend-v1.onrender.com"],
+ origin:["http://localhost:5175" , "http://localhost:5176","https://hurryshop-frontend-v1.onrender.com","https://hurryshop-admin-panel.onrender.com"],
  credentials:true
 }))
 
