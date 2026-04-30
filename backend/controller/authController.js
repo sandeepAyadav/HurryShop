@@ -78,7 +78,7 @@ export const googleLogin = async(req,res)=>{
 
 
 const {name, email} = req.body;
-const user = await User.findOne({ email });
+let user = await User.findOne({ email });
     if (!user) {
      user = await User.create({name, email})
     }
